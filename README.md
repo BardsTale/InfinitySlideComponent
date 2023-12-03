@@ -5,7 +5,7 @@ vue로 개발한 무한 슬라이드 컴포넌트입니다.
 갯수가 홀수인 상태에서 highlight 옵션이 활성화 될 경우 중앙 컨텐츠 강조가 되는 기능을 제공하고 있습니다. 
 
 ## 사용법
-
+[예제코드](https://codepen.io/bardstale/pen/vYbQZJm)
 ```html
 <template>
   <infinity-slide
@@ -30,13 +30,13 @@ vue로 개발한 무한 슬라이드 컴포넌트입니다.
 <script>
   export default {
     methods: {
-      startMethod(){
-        console.log('start');
+      startMethod({now,prev,next}){
+        console.log(now);
       },
-      endMethod(){
-        console.log('end');
+      endMethod({now,prev,next}){
+        alert(now);
       }
-    },
+    }
   };
 </script>
 ```
@@ -55,6 +55,9 @@ vue로 개발한 무한 슬라이드 컴포넌트입니다.
 **slideImg(String)** : 슬라이드에 사용될 이미지의 네이밍 패턴. ex)slide로 저장 시 'slide-' 패턴으로으로 읽어옴.(slide-1.png, slide-2.png)  
 
 ## 이벤트 메소드
+공통적으로 디폴트 파라미터로 슬라이드 상태값을 담은 객체를 제공  
+**{now,prev,next}** : 각각 현재, 이전, 다음의 index값을 나타냄.  
+  
 **nextStartEmit** : 다음 슬라이드로 이동 시 발생하는 이벤트.  
 **prevStartEmit** : 이전 슬라이드로 이동 시 발생하는 이벤트.  
 **nextEndEmit** : 다음 슬라이드로 이동 완료 시 발생하는 이벤트.  
