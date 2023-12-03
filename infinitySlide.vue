@@ -296,7 +296,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import "../scss/common";
 $width : var(--width);
 $height : var(--height);
 $widthSmall : var(--widthSmall);
@@ -394,7 +393,6 @@ $transition : var(--transition);
         }
       }
       &--allow{
-        @include bg($bg:"common/btn-arrow.png");
         cursor: pointer;
         z-index: 11;
         width: 46px;
