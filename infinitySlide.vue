@@ -375,9 +375,8 @@ $transition : var(--transition);
     &-btn{
       &--next{
         position: absolute;
-        right : -60px;
+        right : 0;
         top : 50%;
-        transform: scaleX(-1);
 
         &[data-last='true'] {
           //background-color: darkgreen;
@@ -385,7 +384,7 @@ $transition : var(--transition);
       }
       &--prev{
         position: absolute;
-        left : -60px;
+        left : 0;
         top : 50%;
 
         &[data-first='true'] {
